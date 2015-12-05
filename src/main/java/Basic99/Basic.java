@@ -25,8 +25,9 @@ public class Basic {
     public static void calculateAverage(){
         System.out.println("Enter 2 numbers");
         Scanner sc = new Scanner(System.in);
-        int i = sc.nextInt();
-        int i1 = sc.nextInt();
-        System.out.println("Average is " + (i+i1)/2);
+        double i = sc.nextInt();
+        double i1 = sc.nextInt();
+        double average = (i+i1)/2;
+        System.out.println("Average is " + average);
     }
 }

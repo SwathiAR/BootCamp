@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by root on 12/5/15.
  */
-public class PrintName {
+public class Basic {
 
     public static void main (String args[]) {
         printName();

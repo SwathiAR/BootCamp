@@ -1,6 +1,6 @@
 package Basic99;
 
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class EvenNumberPrinterTest {
     @Test
     public void testPrintEvenNumber() throws Exception {
 
-        Assert.assertEquals(e.printEvenNumber(1).toString() , "[0]");
+        Assert.assertEquals(e.printEvenNumber(1).toString(), "[0]");
         Assert.assertEquals(e.printEvenNumber(9).toString() , "[0, 2, 4, 6, 8]");
     }
 }

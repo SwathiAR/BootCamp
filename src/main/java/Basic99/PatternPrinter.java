@@ -24,7 +24,7 @@ public void printPattern(int n){
         for(int j = i ; j>0;j--){
             System.out.print("*");
         }
-        System.out.println("");
+        System.out.println();
     }
 
 

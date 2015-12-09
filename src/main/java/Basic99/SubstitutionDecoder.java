@@ -5,24 +5,31 @@ package Basic99;
  */
 public class SubstitutionDecoder {
 
-    public String decode(String str){
+    public String decode(int[] code){
 
-        if(str==null || str.equals("")){
-            return  str;
+        if(code==null ){
+            return  null;
+
+        }
+        else if (code.length< 1){
+            return "";
         }
 
         else{
+            StringBuilder sb = new StringBuilder();
 
-            char[] chars = str.toCharArray();
-            for(int i = 0 ; i<str.length();i++){
-                chars[i] = (char)((str.charAt(i) + 64));
+
+            for(int i = 0 ; i<code.length;i++){
+             ;
+                sb.append(Character.toString( (char)((code[i] + 64))));
             }
 
 
 
 
 
-            return String.valueOf(chars);
+
+            return String.valueOf(sb);
         }
 
 

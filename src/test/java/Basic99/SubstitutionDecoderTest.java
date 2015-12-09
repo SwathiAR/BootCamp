@@ -13,10 +13,10 @@ public class SubstitutionDecoderTest {
 
     @Test
     public void testDecode() throws Exception {
-        Assert.assertEquals(s.decode("85121215-32231518124") , "hello world");
-        Assert.assertEquals(s.decode("1234") ,"abcd");
-        Assert.assertEquals(s.decode("") , "");
+        Assert.assertEquals(s.decode(new int[]{1,2, 3, 4}) , "ABCD");
+        Assert.assertEquals(s.decode(new int[]{}) ,"");
         Assert.assertEquals(s.decode(null) , null);
+        Assert.assertEquals(s.decode(new int[]{8, 5, 12, 12, 15, -32, 23, 15, 18, 12, 4}) , "HELLO WORLD");
 
     }
 }

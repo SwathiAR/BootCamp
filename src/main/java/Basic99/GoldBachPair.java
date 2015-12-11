@@ -28,4 +28,21 @@ public int[] getGoldBachPair(int num){
 
     return pair;
 }
+
+    public int[] getBigGoldBachPair(int num , int min) {
+        int temp = num;
+        int[] pairs = new int[2];
+       while(temp>2){
+           if(p.isPrime(--temp) && p.isPrime(num-temp) && temp>min && (num-temp)>min){
+
+                   pairs[0] = temp;
+                   pairs[1] = num-temp;
+                   break;
+
+           }
+
+
+       }
+     return pairs;
+    }
 }

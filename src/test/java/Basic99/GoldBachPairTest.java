@@ -18,4 +18,11 @@ public class GoldBachPairTest {
         assertArrayEquals(g.getGoldBachPair(1856), new int[]{1853, 3});
 
     }
+
+    @Test
+    public void testGetGoldBachBigPair() throws Exception {
+        assertArrayEquals(g.getBigGoldBachPair(12, 4), new int[]{7, 5});
+        assertArrayEquals(g.getBigGoldBachPair(28 , 10), new int[]{17, 11});
+
+    }
 }

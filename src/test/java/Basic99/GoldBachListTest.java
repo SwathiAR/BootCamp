@@ -23,13 +23,13 @@ public class GoldBachListTest {
         map.put(14, new int[]{13, 1});
 
         HashMap<Integer,int[]> map1 = new HashMap<Integer, int[]>();
-        map.put(16, new int[]{13, 3});
-        map.put(18,new int[]{13, 5});
-        map.put(10, new int[]{7, 3});
-      map.put(12, new int[]{7, 5});
-        map.put(14, new int[]{11, 3});
+        map1.put(16, new int[]{13, 3});
+        map1.put(18,new int[]{13, 5});
+        map1.put(10, new int[]{7, 3});
+      map1.put(12, new int[]{7, 5});
+        map1.put(14, new int[]{11, 3});
 
- Assert.assertEquals(list.getGoldBachList(9, 20), map);
+Assert.assertEquals(list.getGoldBachList(9, 20), map);
  Assert.assertEquals(list.getGoldBachList(9,20,2) , map1);
     }
 }

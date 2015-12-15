@@ -58,7 +58,7 @@ public class RemoveDuplicatesTest {
 
 
         Assert.assertEquals(String.valueOf(r.removeDuplicates3(chars)), String.valueOf(chars2));
-        Assert.assertEquals(null, r.removeDuplicates2(null));
+        Assert.assertEquals(null, r.removeDuplicates3(null));
         Assert.assertEquals(String.valueOf(r.removeDuplicates3(chars1)) , String.valueOf(chars11));
         Assert.assertEquals(String.valueOf(r.removeDuplicates3(chars3)) , String.valueOf(chars33));
         Assert.assertEquals(String.valueOf(r.removeDuplicates3(chars4)), String.valueOf(chars44));
@@ -82,14 +82,22 @@ public class RemoveDuplicatesTest {
         char[] chars44 = new char[]{'a' , 'b' , 0 , 0 , 0 , 0 , 0};
 
 
+        char[] chars5 = new char[]{'a' , 'b' , 'c' , 'd' };
+        char[] chars55 = new char[]{'a' , 'b' , 'c' , 'd'};
+
+
+
+
+
 
 
         Assert.assertEquals(String.valueOf(r.removeDuplicates4(chars)), String.valueOf(chars2));
-        Assert.assertEquals(null, r.removeDuplicates2(null));
+        Assert.assertEquals(null, r.removeDuplicates4(null));
+        Assert.assertEquals(new char[]{}, r.removeDuplicates4(new char[]{}));
         Assert.assertEquals(String.valueOf(r.removeDuplicates4(chars1)) , String.valueOf(chars11));
         Assert.assertEquals(String.valueOf(r.removeDuplicates4(chars3)) , String.valueOf(chars33));
         Assert.assertEquals(String.valueOf(r.removeDuplicates4(chars4)), String.valueOf(chars44));
-
+        Assert.assertEquals(String.valueOf(r.removeDuplicates4(chars5)), String.valueOf(chars55));
 
     }
 }

@@ -16,7 +16,7 @@ public class AnagramsTest {
       Assert.assertTrue(a.isAnagram("tea", "ate"));
         Assert.assertFalse(a.isAnagram("tea", "atm"));
         Assert.assertFalse(a.isAnagram("tea", null));
-        Assert.assertFalse(a.isAnagram("tea" , "kate"));
+        Assert.assertFalse(a.isAnagram("tea", "kate"));
     }
 
     @Test
@@ -25,5 +25,15 @@ public class AnagramsTest {
         Assert.assertFalse(a.isAnagram1("tea", "atm"));
         Assert.assertFalse(a.isAnagram1("tea", null));
         Assert.assertFalse(a.isAnagram1("tea", "kate"));
+    }
+
+    @Test
+    public void testIsAnagram2() throws Exception {
+
+            Assert.assertTrue(a.isAnagram2("tea" , "ate"));
+            Assert.assertFalse(a.isAnagram2("tea", "atm"));
+            Assert.assertFalse(a.isAnagram2("tea", null));
+            Assert.assertFalse(a.isAnagram2("tea", "kate"));
+
     }
 }

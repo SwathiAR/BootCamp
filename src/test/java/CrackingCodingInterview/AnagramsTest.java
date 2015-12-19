@@ -1,9 +1,8 @@
 package CrackingCodingInterview;
 
+import CrackingCodingInterview.Strings.Anagrams;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
 
 /**
  * Created by root on 12/15/15.
@@ -30,7 +29,7 @@ public class AnagramsTest {
     @Test
     public void testIsAnagram2() throws Exception {
 
-            Assert.assertTrue(a.isAnagram2("tea" , "ate"));
+            Assert.assertTrue(a.isAnagram2("tea", "ate"));
             Assert.assertFalse(a.isAnagram2("tea", "atm"));
             Assert.assertFalse(a.isAnagram2("tea", null));
             Assert.assertFalse(a.isAnagram2("tea", "kate"));

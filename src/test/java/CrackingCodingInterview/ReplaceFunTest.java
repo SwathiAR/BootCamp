@@ -1,9 +1,8 @@
 package CrackingCodingInterview;
 
+import CrackingCodingInterview.Strings.ReplaceFun;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
 
 /**
  * Created by root on 12/15/15.

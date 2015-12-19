@@ -1,4 +1,4 @@
-package CrackingCodingInterview;
+package CrackingCodingInterview.Strings;
 
 /**
  * Created by root on 12/12/15.

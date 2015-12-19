@@ -1,4 +1,4 @@
-package CrackingCodingInterview;
+package CrackingCodingInterview.Strings;
 
 /**
  *

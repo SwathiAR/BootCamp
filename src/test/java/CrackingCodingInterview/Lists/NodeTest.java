@@ -16,7 +16,7 @@ public class NodeTest {
     @Test
     public void testNode() throws Exception{
         System.out.println(node.toString());
-        Assert.assertEquals(node.getData() , 2);
+        Assert.assertEquals(node.getData(), 2);
         node.setData(3);
         System.out.println(node.toString());
         Assert.assertEquals(node.getData(), 3);
@@ -24,7 +24,7 @@ public class NodeTest {
         System.out.println(node.toString());
         Assert.assertEquals(node.getNext(), null);
 
-        node.setNext(5);
+        node.setNext(new Node(5));
         System.out.println(node.toString());
         Assert.assertEquals(node.getNext().getData() , 5);
 

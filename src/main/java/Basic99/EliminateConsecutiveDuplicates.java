@@ -27,6 +27,7 @@ public class EliminateConsecutiveDuplicates {
             i++;
         }
 
+
         return result;
     }
 }

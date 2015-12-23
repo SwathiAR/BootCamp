@@ -4,10 +4,10 @@ package CrackingCodingInterview.Lists;
  * Created by root on 12/17/15.
  */
 public class Node {
-    int data;
-    Node next;
+    public int data;
+    public Node next;
 
-    Node(int data){
+    public Node(int data){
         this.data = data;
     }
 
@@ -23,10 +23,8 @@ public class Node {
         return next;
     }
 
-    public void setNext(int data){
-      Node nextToNext = this.next;
-        this.next = new Node(data);
-        next.next = nextToNext;
+    public void setNext(Node node){
+      this.next = node;
 
     }
 

@@ -13,7 +13,7 @@ public class StackWithMinOperation {
     public void push(int value){
         StackNodeWithMin node = new StackNodeWithMin(value);
         node.setPrevious(head);
-        int min = head==null?value:head.getData()>value?value:head.getData();
+        int min = head==null?value:head.getMin()>value?value:head.getMin();
         node.setMin(min);
         head = node;
         length++;

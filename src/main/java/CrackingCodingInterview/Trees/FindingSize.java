@@ -7,18 +7,16 @@ import java.util.Queue;
  * Created by root on 1/10/16.
  */
 public class FindingSize {
-    int size = 0;
     public int findSize(BinaryTreeNode node){
         if(node==null){
-            return size;
+            return 0;
         }
 
         else{
-            size++;
-            findSize(node.getLeft());
+            return 1+
+            findSize(node.getLeft())+
             findSize(node.getRight());
         }
-        return  size;
     }
 
 

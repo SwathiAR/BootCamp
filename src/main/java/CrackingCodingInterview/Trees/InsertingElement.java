@@ -41,16 +41,17 @@ public class InsertingElement {
 
 public void insertElementRecursively(BinaryTreeNode node , int num){
     if(node == null){
-        node = new BinaryTreeNode(num);
         return;
     }
 
     if(node.getLeft()==null) {
-
-        insertElement(node.getLeft(), num);
+        node.setLeft(new BinaryTreeNode(num));
+    }
+    else if(node.getRight()==null) {
+        node.setRight(new BinaryTreeNode(num));
     }
     else{
-        insertElement(node.getRight() , num);
+        insertElementRecursively(node.getRight(), num);
     }
 
 

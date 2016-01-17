@@ -18,4 +18,26 @@ public class FindingElementInBST {
 
 
     }
+
+    public  BinarySearchNode findWithoutRecursion(BinarySearchNode root , int data){
+
+        if(root == null){
+            return  null;
+        }
+
+        while(root!= null){
+            if((Integer)root.getData() == data){
+                return root;
+            }
+            else if((Integer)root.getData() > data){
+                root = root.getLeft();
+            }
+            else root = root.getRight();
+        }
+
+
+
+        return  root;
+
+    }
 }

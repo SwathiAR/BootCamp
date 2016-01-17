@@ -26,8 +26,9 @@ FindingElementInBST f = new FindingElementInBST();
         left.setLeft(left1);
         left.setRight(left2);
 
-        Assert.assertEquals((int)(Integer)f.find(root , 9).getData() , 9 );
-
-
+        Assert.assertEquals((int) (Integer) f.find(root, 9).getData(), 9);
+        Assert.assertEquals((int)(Integer)f.findWithoutRecursion(root, 9).getData() , 9 );
+        Assert.assertEquals((int)(Integer)f.find(root, 7).getData() , 7 );
+        Assert.assertEquals((int)(Integer)f.findWithoutRecursion(root, 7).getData() , 7 );
     }
 }

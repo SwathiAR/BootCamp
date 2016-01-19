@@ -11,7 +11,7 @@ public BinaryTreeNode findLCA(BinaryTreeNode root , BinaryTreeNode node1 , Binar
     }
 
     if(root == node1 || root == node2){
-        return node1;
+        return root;
     }
 
     BinaryTreeNode left = findLCA(root.getLeft() , node1 , node2);

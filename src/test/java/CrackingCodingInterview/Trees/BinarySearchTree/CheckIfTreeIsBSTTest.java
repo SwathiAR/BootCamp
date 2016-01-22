@@ -45,5 +45,7 @@ CheckIfTreeIsBST c = new CheckIfTreeIsBST()  ;
         Assert.assertFalse(c.isBST(rootO));
         Assert.assertTrue(c.isBST2(root));
         Assert.assertFalse(c.isBST2(rootO));
+        Assert.assertTrue(c.isBST3(root));
+        Assert.assertFalse(c.isBST3(rootO));
     }
 }

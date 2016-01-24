@@ -10,7 +10,7 @@ public class BinarySearchNode<T> {
     BinarySearchNode right;
     T data ;
 
-    BinarySearchNode(T data){
+    public BinarySearchNode(T data){
         this.data = data;
     }
     public BinarySearchNode getRight() {

@@ -7,6 +7,7 @@ public class Node {
     public int data;
     public Node next;
 
+
     public Node(int data){
         this.data = data;
     }
@@ -20,13 +21,15 @@ public class Node {
     }
 
     public Node getNext(){
-        return next;
+                   return next;
     }
 
     public void setNext(Node node){
       this.next = node;
 
     }
+
+
 
     public Node appendToTail(int data){
         Node newNode = new Node(data);

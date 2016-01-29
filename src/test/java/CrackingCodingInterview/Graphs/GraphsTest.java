@@ -46,23 +46,24 @@ public class GraphsTest {
 
     @Test
     public void testAddEdge() throws Exception {
- assertEquals(g.vertices[0].getNext().getData() ,1 );
-        assertEquals(g.vertices[0].getNext().getNext().getData() ,2 );
-        assertEquals(g.vertices[1].getNext().getData() ,3 );
-        assertEquals(g.vertices[1].getNext().getNext().getData() ,4 );
-        assertEquals(g.vertices[2].getNext().getData() ,4 );
-        assertEquals(g.vertices[3].getNext().getData() ,5 );
-        assertEquals(g.vertices[4].getNext().getData() ,5 );
+ assertEquals(g.vertices[0].adjList.contains(g.vertices[1]) ,true );
+        assertEquals(g.vertices[0].adjList.contains(g.vertices[2]) ,true );
+        assertEquals(g.vertices[1].adjList.contains(g.vertices[3]) ,true );
+        assertEquals(g.vertices[1].adjList.contains(g.vertices[4]) ,true );
+        assertEquals(g.vertices[2].adjList.contains(g.vertices[4]) ,true);
+        assertEquals(g.vertices[3].adjList.contains(g.vertices[5]) ,true );
+        assertEquals(g.vertices[4].adjList.contains(g.vertices[5]) ,true );
+        assertEquals(g.vertices[4].adjList.contains(g.vertices[0]) ,false );
 
 
     }
 
     @Test
     public void testRemoveEdge() throws Exception {
-      g.addEdge(5 , 4);
-        assertEquals(g.vertices[5].getNext().getData(), 4);
+      g.addEdge(5, 4);
+        assertEquals(g.vertices[5].adjList.contains(g.vertices[4]) ,true);
         g.removeEdge(5, 4);
-        assertEquals(g.vertices[5].getNext() , null);
+        assertEquals(g.vertices[5].adjList.contains(g.vertices[4]) ,false);
 
     }
 

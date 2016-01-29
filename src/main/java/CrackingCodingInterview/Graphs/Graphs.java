@@ -30,8 +30,8 @@ public class Graphs {
 
     public void addEdge(int source, int destination) {
         if (source != -1 || destination != -1) {
-            vertices[source].appendToTail(destination);
-
+       //     vertices[source].appendToTail(destination);
+        vertices[source].adjList.addFirst(vertices[destination]);
 
         }
 
@@ -40,7 +40,8 @@ public class Graphs {
 
     public void removeEdge(int source, int destination) {
         if (source != -1 || destination != -1) {
-            vertices[source].deleteNode(vertices[source], destination);
+     //       vertices[source].deleteNode(vertices[source], destination);
+            vertices[source].adjList.remove(vertices[destination]);
 
 
         }
@@ -59,10 +60,11 @@ public class Graphs {
        if( !vertices[index].visited){
            vertices[index].visited = true;
            System.out.println(vertices[index].label);
-           Node temp = vertices[index];
-           while(temp.getNext() != null){
-               theStack.push(temp.getNext());
-               temp = temp.getNext();
+           Vertex1 temp = vertices[index];
+
+
+           for(Vertex1 adjElement : temp.adjList){
+               theStack.push(adjElement);
            }
        }
 
@@ -89,11 +91,12 @@ public class Graphs {
         if( !vertices[index].visited){
             vertices[index].visited = true;
             System.out.println(vertices[index].label);
-            Node temp = vertices[index];
-            while(temp.getNext() != null){
-                theQueue.offer(temp.getNext());
-                temp = temp.getNext();
+            Vertex1 temp = vertices[index];
+
+            for(Vertex1 adjElement : temp.adjList){
+                theQueue.offer(adjElement);
             }
+
         }
 
         if(!theQueue.isEmpty()){

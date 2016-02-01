@@ -8,6 +8,10 @@ public class Heap {
     public int[] array;
     public int count;
     public int capacity;
+    public int parent;
+    public int leftChild;
+    public int rightChild;
+
 
     public Heap( int capacity) {
         this.capacity = capacity;
@@ -15,9 +19,6 @@ public class Heap {
         array = new int[capacity];
     }
 
-    public int parent;
-    public int leftChild;
-    public int rightChild;
 
 
     public int getParent(int i) {

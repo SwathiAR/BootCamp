@@ -30,7 +30,6 @@ public class Graphs {
 
     public void addEdge(int source, int destination) {
         if (source != -1 || destination != -1) {
-       //     vertices[source].appendToTail(destination);
         vertices[source].adjList.addFirst(vertices[destination]);
 
         }
@@ -40,7 +39,6 @@ public class Graphs {
 
     public void removeEdge(int source, int destination) {
         if (source != -1 || destination != -1) {
-     //       vertices[source].deleteNode(vertices[source], destination);
             vertices[source].adjList.remove(vertices[destination]);
 
 

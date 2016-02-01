@@ -17,7 +17,7 @@ public class Tower {
 
     public void add(int num){
         if(!disks.isEmpty() && disks.peek()<= num){
-            throw new RuntimeException("Error! Please place smaller disk");
+            System.out.println("Error! Please place smaller disk");
         }
         disks.push(num);
 

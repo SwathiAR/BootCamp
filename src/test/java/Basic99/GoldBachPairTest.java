@@ -15,7 +15,7 @@ public class GoldBachPairTest {
     public void testGetGoldBachPair() throws Exception {
         assertArrayEquals(g.getGoldBachPair(12), new int[]{11, 1});
         assertArrayEquals(g.getGoldBachPair(28), new int[]{23, 5});
-        assertArrayEquals(g.getGoldBachPair(1856), new int[]{1853, 3});
+        assertArrayEquals(g.getGoldBachPair(1856), new int[]{1789, 67});
 
     }
 

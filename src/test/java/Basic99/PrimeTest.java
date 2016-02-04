@@ -14,6 +14,7 @@ public class PrimeTest {
     public void testPrime(){
         Assert.assertTrue(p.isPrime(7));
         Assert.assertFalse(p.isPrime(0));
+        Assert.assertFalse(p.isPrime(01));
         Assert.assertTrue(p.isPrime(19));
         Assert.assertFalse(p.isPrime(8));
     }

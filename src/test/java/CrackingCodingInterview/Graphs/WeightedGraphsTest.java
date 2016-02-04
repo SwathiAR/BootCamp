@@ -44,14 +44,14 @@ public class WeightedGraphsTest {
 
     @Test
     public void testAddEdge() throws Exception {
-        assertEquals(g.vertices[0].adjacentWeightedEdges.contains(new Edge(g.vertices[1])), true);
-        assertEquals(g.vertices[0].adjacentWeightedEdges.contains(new Edge(g.vertices[2])), true);
-        assertEquals(g.vertices[1].adjacentWeightedEdges.contains(new Edge(g.vertices[3])), true);
-        assertEquals(g.vertices[1].adjacentWeightedEdges.contains(new Edge(g.vertices[4])), true);
-        assertEquals(g.vertices[2].adjacentWeightedEdges.contains(new Edge(g.vertices[4])), true);
-        assertEquals(g.vertices[3].adjacentWeightedEdges.contains(new Edge(g.vertices[5])), true);
-        assertEquals(g.vertices[4].adjacentWeightedEdges.contains(new Edge(g.vertices[5])), true);
-        assertEquals(g.vertices[4].adjacentWeightedEdges.contains(new Edge(g.vertices[0])), false);
+        assertEquals(g.vertices[0].adjacentWeightedEdges.contains(new Edge(g.vertices[0] ,g.vertices[1])), true);
+        assertEquals(g.vertices[0].adjacentWeightedEdges.contains(new Edge(g.vertices[0] ,g.vertices[2])), true);
+        assertEquals(g.vertices[1].adjacentWeightedEdges.contains(new Edge(g.vertices[1] ,g.vertices[3])), true);
+        assertEquals(g.vertices[1].adjacentWeightedEdges.contains(new Edge(g.vertices[1] ,g.vertices[4])), true);
+        assertEquals(g.vertices[2].adjacentWeightedEdges.contains(new Edge(g.vertices[2] ,g.vertices[4])), true);
+        assertEquals(g.vertices[3].adjacentWeightedEdges.contains(new Edge(g.vertices[3] ,g.vertices[5])), true);
+        assertEquals(g.vertices[4].adjacentWeightedEdges.contains(new Edge(g.vertices[4] ,g.vertices[5])), true);
+        assertEquals(g.vertices[4].adjacentWeightedEdges.contains(new Edge(g.vertices[4] ,g.vertices[0])), false);
 
     }
 
@@ -60,9 +60,9 @@ public class WeightedGraphsTest {
 
 
         g.addEdge(5,  4 , 66);
-        assertEquals(g.vertices[5].adjacentWeightedEdges.contains(new Edge(g.vertices[4])), true);
+        assertEquals(g.vertices[5].adjacentWeightedEdges.contains(new Edge(g.vertices[5] ,g.vertices[4])), true);
         g.removeEdge(5, 4);
-        assertEquals(g.vertices[5].adjacentWeightedEdges.contains(new Edge(g.vertices[4])), false);
+        assertEquals(g.vertices[5].adjacentWeightedEdges.contains(new Edge(g.vertices[5] , g.vertices[4])), false);
 
     }
 }

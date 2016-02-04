@@ -14,7 +14,7 @@ public class HeapTest {
     Heap h = new Heap(15);
 
 
-
+@BeforeTest
     public void setUp() throws Exception {
         h.insert(1);
         h.insert(5);
@@ -33,8 +33,8 @@ public class HeapTest {
 
 
 
-
-    public void testInsert() throws Exception {
+@Test
+    public void tes1tInsert() throws Exception {
         Assert.assertEquals(h.array[0], 21);
         Assert.assertEquals(h.array[1], 11);
         Assert.assertEquals(h.array[2], 18);
@@ -50,8 +50,8 @@ public class HeapTest {
 
     }
 
-
-    public void testGetParent() throws Exception {
+@Test
+    public void test2GetParent() throws Exception {
         Assert.assertEquals(h.getParent(4) , 1);
         Assert.assertEquals(h.getParent(3), 1);
         Assert.assertEquals(h.getParent(1) , 0);
@@ -60,28 +60,28 @@ public class HeapTest {
         Assert.assertEquals(h.getParent(18) , -1);
 
     }
-
-    public void testGetleftChild() throws Exception {
+@Test
+    public void test3GetleftChild() throws Exception {
         Assert.assertEquals(h.array[h.getleftChild(4)] , 2);
     }
 
-
-    public void testGetRightChild() throws Exception {
+@Test
+    public void test4GetRightChild() throws Exception {
         Assert.assertEquals(h.array[h.getRightChild(4)] , 7);
     }
 
-
-    public void testGetMaximum() throws Exception {
+@Test
+    public void test5GetMaximum() throws Exception {
         Assert.assertEquals(h.getMaximum() , 21);
     }
 
-
-    public void testPercolateDown() throws Exception {
+@Test
+    public void test6PercolateDown() throws Exception {
 
     }
 
-
-    public void testDeleteMax() throws Exception {
+@Test
+    public void test7DeleteMax() throws Exception {
         h.deleteMax() ;
         Assert.assertEquals(h.array[0], 18);
         Assert.assertEquals(h.array[1], 11);

@@ -31,7 +31,7 @@ public class WeightedGraphs {
 
     public void addEdge(int source, int destination , int weight) {
         if (source != -1 || destination != -1) {
-            vertices[source].adjacentWeightedEdges.addFirst((new Edge(vertices[destination] , weight)));
+            vertices[source].adjacentWeightedEdges.addFirst((new Edge(vertices[source] ,vertices[destination] , weight)));
 
         }
 
@@ -40,7 +40,7 @@ public class WeightedGraphs {
     public void removeEdge(int source, int destination) {
         if (source != -1 || destination != -1) {
 
-            vertices[source].adjacentWeightedEdges.remove(new Edge(vertices[destination]  ));
+            vertices[source].adjacentWeightedEdges.remove(new Edge(vertices[source] ,vertices[destination]  ));
 
 
         }

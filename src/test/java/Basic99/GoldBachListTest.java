@@ -13,7 +13,7 @@ public class GoldBachListTest {
 
     GoldBachList list = new GoldBachList();
 
-    @Test
+
     public void testGetGoldBachList() throws Exception {
         HashMap<Integer,int[]> map = new HashMap<Integer, int[]>();
         map.put(16, new int[]{13, 3});

@@ -62,4 +62,58 @@ public class MergeSort2 {
         }
         return tempArray;
     }
+
+
+
+
+    public  int[] doMergeSort(int[] array){
+        if(array == null || array.length <2){
+            return array;
+        }
+
+
+        int length = array.length;
+        int mid = length/2;
+        int[] left = new int[mid];
+        int[] right = new int[length-mid];
+
+        for(int i = 0 ; i<mid ; i++){
+            left[i] = array[i];
+        }
+        for(int j = 0 ,i = mid ; i<length ; i++ , j++){
+            right[j] = array[i];
+        }
+        int[] leftSorted = doMergeSort(left);
+        int[] rightSorted = doMergeSort(right);
+
+        return merge1(leftSorted, rightSorted);
+
+    }
+
+    private int[] merge1(int[] left, int[] right) {
+        int i = 0, j = 0, k = 0;
+        int[] result = new int[left.length + right.length];
+        while (i < left.length && j < right.length) {
+            if (left[i] <= right[j]) {
+                result[k] = left[i];
+                k++;
+                i++;
+            } else {
+                result[k] = right[j];
+                k++;
+                j++;
+            }
+        }
+
+        while(i<left.length){
+            result[k++] = left[i++];
+        }
+
+        while ((j<right.length)){
+            result[k++] = right[j++];
+
+
+        }
+        return result;
+    }
 }
